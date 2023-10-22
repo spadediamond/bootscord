@@ -1,9 +1,7 @@
 package com.kosmos.bootscord.entities;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import com.kosmos.bootscord.enums.DisplayStatus;
+import jakarta.persistence.*;
 
 import static jakarta.persistence.GenerationType.IDENTITY;
 
@@ -11,15 +9,22 @@ import static jakarta.persistence.GenerationType.IDENTITY;
 public class BootscordUser {
 
     @Id
+    @Column(name="ID")
     @GeneratedValue(strategy = IDENTITY)
     private Integer id;
-
     @Column
-    private String username;
-
+    private String userName;
     @Column
     private String displayName;
-
     @Column
     private byte[] profilePicture;
+    @Column
+    private String email;
+    @Column
+    private DisplayStatus status;
+    @Column
+    private String password;
+
+
+
 }
