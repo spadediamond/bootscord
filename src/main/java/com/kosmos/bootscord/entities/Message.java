@@ -6,19 +6,19 @@ import java.time.LocalDateTime;
 
 import static jakarta.persistence.GenerationType.IDENTITY;
 
-@Entity
+//@Entity
 public class Message {
     @Id
     @GeneratedValue(strategy = IDENTITY)
     private Integer id;
 
-    @ManyToOne
-    @JoinColumn(referencedColumnName = "ID")
-    private BootscordUser sender;
-
-    @ManyToOne
-    @JoinColumn(referencedColumnName = "ID")
-    private BootscordUser receiver;
+//    @ManyToOne
+//    @JoinColumn(referencedColumnName = "ID")
+//    private BootscordUser sender;
+//
+//    @ManyToOne
+//    @JoinColumn(referencedColumnName = "ID")
+//    private BootscordUser receiver;
 
     @Column
     private LocalDateTime dateSent;
