@@ -10,20 +10,26 @@
 <body>
     <div class="register-page-container">
         <h1 class="title">Register</h1>
-            <form th:action="@{/register}" th:object="${user}" method="POST">
+            <form th:action="@{/register}"
+                  th:object="${user}" method="POST">
+
                 <label>Username</label>
-                <input type="text" th:field="*{userName}" placeholder="Type your username..."  required />
+                <input type="text" th:field="*{userName}" placeholder="Username"  required />
 
                 <label>Display Name</label>
-                <input type="text" th:field="*{displayName}" placeholder="Type your display name..."  required />
+                <input type="text" th:field="*{displayName}" placeholder="Display Name"  required />
 
                 <label>Email</label>
-                <input type="text" th:field="*{email}" placeholder="Type your email..." required />
+                <input type="text" th:field="*{email}" placeholder="Email" required />
 
                 <label>Password</label>
-                <input type="text" th:field="*{password}" placeholder="Type your password..." required />
+                <input type="text" th:field="*{password}" placeholder="Password" required />
                 <button type="submit" class="primary">Register</button>
             </form>
+
+            <!-- Gives you option to go back to login page -->
+            <hr>
+            <a th:href="@{/}">Back to Login page</a>
     </div>
 </body>
 </html>
