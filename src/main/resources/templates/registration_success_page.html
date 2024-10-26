@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Registration Successful</title>
+</head>
+<body>
+    <h1>Registration Successful!</h1>
+    <p>You will be redirected to the main page shortly. If not, click <a th:href="@{/}">here</a>.</p>
+
+    <!-- JS part to redirect page -->
+    <script>
+        // Redirects to the main page after 5 seconds
+        setTimeout(function() {
+            window.location.href = '/';
+        }, 5000);
+    </script>
+</body>
+</html>
